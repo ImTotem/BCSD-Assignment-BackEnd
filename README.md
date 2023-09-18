@@ -1,59 +1,21 @@
 # BCSD-Assignment-BackEnd
-BCSD BackEnd 실습 과제 - 0주차
+BCSD BackEnd 실습 과제 - 1주차
 
-## 단어 찾기
-**주어진 문장에서 특정 단어를 찾고, 해당 단어의 빈도수를 계산하는 프로그램을 작성해보세요.**
-1. 사용자로부터 하나의 문장을 입력받습니다.
-2. 사용자로부터 찾고자 하는 단어를 입력받습니다.
-3. 입력받은 문장에서 해당 단어가 몇 번 나타나는지 계산하고 출력합니다.
-
-- 대소문자를 구분하지 않고 계산합니다. ("Hello"와 "hello"는 같은 단어)
-- 단어는 띄어쓰기로 구분하고, 특수문자가 있다면 특수문자까지 함께 하나의 단어로 취급합니다.
-- String과 List를 사용하여 작성합니다.
-  - String
-    - toLowerCase()를 활용하여 대소문자 구분을 없앨 수 있습니다.
-    - split()을 활용하여 하나의 문장을 여러 단어로 분리할 수 있습니다.
-    - equals(String)을 활용하여 두 단어의 일치 여부를 판단할 수 있습니다.
-  - List
-    - add(Object)를 활용하여 객체(String 등)를 담을 수 있습니다.
-    - for-each문과 함께 사용하여 리스트 요소를 편하게 순회할 수 있습니다.
-
----
-## 입력 예제
-
-### 예제 입력 1
-```text
-Hello World
-hello
-```
-
-### 예제 출력 1
-```text
-단어 'hello'의 빈도수: 1
-```
-
----
-
-### 예제 입력 2
-```text
-Hello, Gito. Hello, Everyone!
-hello,
-```
-
-### 예제 출력 2
-```text
-단어 ‘hello,’의 빈도수: 2
-```
-
----
-
-### 예제 입력 3
-```text
-apple kiwi banana kiwi bird kiwi.
-kiwi
-```
-
-### 예제 출력 3
-```text
-단어 ‘kiwi’의 빈도수: 2
-```
+## 뮤직 플레이어 만들기
+1. **`MusicPlayer` 인터페이스**를 정의합니다. 이 인터페이스는 다음과 같은 추상 메서드를 가져야 합니다.
+   - `void play()`: 음악을 재생하는 기능을 구현합니다.
+   - `void pause()`: 음악을 일시 정지하는 기능을 구현합니다.
+   - `void stop()`: 음악을 정지하는 기능을 구현합니다.
+     <br><br>
+2. `MusicPlayer` 인터페이스를 구현하는 두 개의 클래스를 만듭니다.
+   - `StreamingMusicPlayer`와 `LocalMusicPlayer`
+   - `StreamingMusicPlayer` 클래스: 인터넷을 통해 음악을 스트리밍하는 기능을 추가로 구현합니다.
+   - `LocalMusicPlayer` 클래스: 로컬에서 저장된 음악 파일을 재생하는 기능을 추가로 구현합니다.
+     <br><br>
+3. 각 클래스의 메서드는 단순히 **메세지 출력**하는 형태로 구현합니다.
+   - 예를 들어, `play()` 메서드에서는 `"PC에 저장된 음악을 재생합니다."`와 같은 문장을 출력합니다.
+     <br><br>
+4. `MusicPlayer`를 테스트하는 클래스인 **`Main` 클래스**를 만듭니다. `Main` 클래스에서는 다음과 같은 동작을 수행합니다.
+   - `StreamingMusicPlayer`와 `LocalMusicPlayer` **객체**를 **생성**합니다.
+   - 두 객체의 `play()`, `pause()`, `stop()` 메서드를 순서대로 **호출**하여 동작을 확인합니다.
+   - 만약 `StreamingMusicPlayer`나 `LocalMusicPlayer` 클래스에서 새로운 메서드를 추가로 구현했다면 해당 기능도 테스트합니다.
