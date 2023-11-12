@@ -2,6 +2,7 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+BCSD-Assignment-BackEnd.iml
 
 ### Eclipse ###
 .apt_generated
